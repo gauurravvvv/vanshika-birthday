@@ -1,6 +1,17 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./App.scss";
 
+// Import images
+import img1 from "./images/fd9b1018-4ff5-4fe9-a2b1-0e39b07d42a6.JPG";
+import img2 from "./images/IMG_8465.JPG";
+import img3 from "./images/IMG_9788.JPG";
+import img4 from "./images/IMG_0792.JPG";
+import img5 from "./images/IMG_8565.JPG";
+import img6 from "./images/IMG_8567.JPG";
+import img7 from "./images/IMG_8816.JPG";
+import img8 from "./images/IMG_0833.jpg";
+import img9 from "./images/IMG_9589.JPG";
+
 function App() {
 	const [activeScreen, setActiveScreen] = useState("welcome");
 	const [unlockedLocks, setUnlockedLocks] = useState({});
@@ -174,7 +185,7 @@ function App() {
 
 	const showEnvelope = () => {
 		const unlockedCount = Object.keys(unlockedLocks).filter((key) => unlockedLocks[key]).length;
-		
+
 		if (unlockedCount < 6) {
 			// Show message to unlock all locks first
 			const message = document.createElement("div");
@@ -201,7 +212,7 @@ function App() {
 			}, 2500);
 			return;
 		}
-		
+
 		setActiveScreen("envelope");
 	};
 
@@ -352,7 +363,7 @@ function App() {
 							<p className="story-text">Little did I know, you would become my everything — my habit, my necessity, and the permanent resident of my heart. ❤️</p>
 						</div>
 						<div className="story-image-box">
-							<div className="story-image">📷</div>
+							<img src={img1} alt="When Our Story Began" className="story-image-photo" />
 							<div className="story-caption">When Our Story Began ✨</div>
 						</div>
 					</div>
@@ -371,7 +382,7 @@ function App() {
 							<p className="story-text">You made ordinary days feel extraordinary. You became my favorite hello and my hardest goodbye. 💫</p>
 						</div>
 						<div className="story-image-box">
-							<div className="story-image">📷</div>
+							<img src={img3} alt="Building Beautiful Memories" className="story-image-photo" />
 							<div className="story-caption">Building Beautiful Memories 💑</div>
 						</div>
 					</div>
@@ -390,14 +401,14 @@ function App() {
 							<p className="story-text">This wasn't just about being together; it was about knowing we both wanted this forever. 💖</p>
 						</div>
 						<div className="story-image-box">
-							<div className="story-image">📷</div>
-							<div className="story-caption">The Day You Said Yes 💕</div>
+							<img src={img5} alt="The Day You Said Yes" className="story-image-photo" />
+							<div className="story-caption">The Day You Said Let's Go 💕</div>
 						</div>
 					</div>
 				</div>
 
 				<div className="story-section" data-section="3">
-					<div className="story-content reverse">
+					<div className="story-contonent reverse">
 						<div className="story-text-box">
 							<div className="story-date">🏠 6 Months of Heaven</div>
 							<p className="story-text">
@@ -409,7 +420,7 @@ function App() {
 							</p>
 						</div>
 						<div className="story-image-box">
-							<div className="story-image">📷</div>
+							<img src={img6} alt="Our Little Paradise" className="story-image-photo" />
 							<div className="story-caption">Our Little Paradise 💑</div>
 						</div>
 					</div>
@@ -428,7 +439,7 @@ function App() {
 							<p className="story-text">Those two months felt like two years. Our house wasn't home anymore without you. 💔</p>
 						</div>
 						<div className="story-image-box">
-							<div className="story-image">📷</div>
+							<img src={img8} alt="The Painful Goodbye" className="story-image-photo" />
 							<div className="story-caption">The Painful Goodbye 😢</div>
 						</div>
 					</div>
@@ -447,7 +458,7 @@ function App() {
 							</p>
 						</div>
 						<div className="story-image-box">
-							<div className="story-image">📷</div>
+							<img src={img9} alt="Five Days of Magic" className="story-image-photo" />
 							<div className="story-caption">Five Days of Magic 🎆</div>
 						</div>
 					</div>
@@ -471,7 +482,7 @@ function App() {
 							</button>
 						</div>
 						<div className="story-image-box">
-							<div className="story-image">📷</div>
+							<img src={img7} alt="Forever & Always" className="story-image-photo" />
 							<div className="story-caption">Forever & Always 💕</div>
 						</div>
 					</div>
